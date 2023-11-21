@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="card bg-dark" style="margin: 8rem auto;width: 35rem;">
+   
+    <div class="card-body">
+      <h3 class="text-primary text-center">Typing Master</h3>
+    </div>
+
+      <p class="text-center">
+       <span *ngFor="let shubham of myText.split('');let i=index;" [class]="compare(shubham,EnteresText[i])">  
+        {{shubham}}
+      </span>
+      </p>
+
+      <input type="type-text" class="form-control" #input (keyup)="oninput(input.value)" autofocus>
+
+      <div class="my-4 text-success text-center" *ngIf="myText===EnteresText">
+        Success
+      </div>
+
+    </div>
+</div>
